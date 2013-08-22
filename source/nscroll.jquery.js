@@ -56,11 +56,11 @@
 							options.callback();
 						}
 					}else{
-						var y =  $(options.parent).height()-$(ele).outerHeight();
+						var y =  $(options.parent).outerHeight()-$(ele).outerHeight();
 						if(options.animate){
-							$(ele).stop().animate({ top: ''+y }, options.speed, options.ease, options.callback );
+							$(ele).stop().animate({ top: y }, options.speed, options.ease, options.callback );
 						}else{
-							$(ele).stop().css('top',''+y);
+							$(ele).stop().css('top',y);
 							options.callback();
 						}
 					}
