@@ -8,14 +8,14 @@
  * @license         GPLv3
  * @link            http://nscroll.neschkudla.at
  * @docs            http://nscroll.neschkudla.at/
- * @version         Version 0.1
+ * @version         Version 1.0.3
  *
  ******************************************/
 
 ;(function($) {
 	$.fn.extend({
 		nscroll: function(options,arg) { 
-			if (options && typeof(options) == 'object') {
+			if ((options && typeof(options) == 'object') || (typeof(options) == 'undefined')) {
 	            options = $.extend( {}, $.nscroll.defaults, options );
 	        }
 	        this.each(function() {
