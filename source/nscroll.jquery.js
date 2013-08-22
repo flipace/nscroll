@@ -52,7 +52,7 @@
 						if(options.animate){ 
 							$(ele).stop().animate({ top: '+='+y }, options.speed, options.ease, options.callback );
 						}else{
-							$(ele).css('top','+='+y);
+							$(ele).stop().css('top','+='+y);
 							options.callback();
 						}
 					}else{
@@ -60,15 +60,25 @@
 						if(options.animate){
 							$(ele).stop().animate({ top: ''+y }, options.speed, options.ease, options.callback );
 						}else{
-							$(ele).css('top',''+y);
+							$(ele).stop().css('top',''+y);
 							options.callback();
 						}
 					}
 				}else{
-					$(ele).css('top', 0);
+					if(options.animate){
+						$(ele).stop().animate({ top: 0 }, options.speed, options.ease, options.callback );
+					}else{
+						$(ele).stop().css('top', 0);
+						options.callback();
+					}
 				}
 			}else{
-				$(ele).css('top', 0);				
+				if(options.animate){
+					$(ele).stop().animate({ top: 0 }, options.speed, options.ease, options.callback );
+				}else{
+					$(ele).stop().css('top', 0);
+					options.callback();
+				}				
 			}
         }
         
