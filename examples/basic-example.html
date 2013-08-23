@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>nscroll basic example</title>
+		<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="../source/nscroll.jquery.js"></script>
+
+		<style type="text/css">
+			*{
+				font-family:Tahoma, Verdana, Arial;
+				color:#fff;
+				font-size:12px;
+				text-align:center;
+			}
+			body{
+				height:3000px;
+			}
+			#container-1{
+				position:absolute;
+				top:50px;
+				left:30px;
+				background-color:#dd9900;
+				height:500px;
+				width:150px;
+			}
+
+			#nscroll-element-1{
+				width:50px;
+				margin:0 auto;
+				height:30px;
+				background-color:#000;
+			}
+
+			#container-2{
+				width:200px;
+				height:800px;
+				background-color:#3F5D7D;
+				position:absolute;
+				left:300px;
+				top:10px;
+			}
+
+			#nscroll-element-2{
+				background-color:#279B61;
+				width:160px;
+				margin:0 auto;
+				height:400px;
+			}
+
+			#nscroll-element-3{
+				background-color:#008AB8;
+				width:100px;
+				margin:0 auto;
+				height:200px;
+				padding:10px;
+			}
+
+			#nscroll-element-4{
+				background-color:#993333;
+				width:50px;
+				margin:0 auto;
+				height:50px;
+			}
+
+			#container-3{
+				width:600px;
+				height:400px;
+				position:absolute;
+				left:600px;
+			}
+
+			.multiple-nscrolls{
+				width:60px;
+				height:60px;
+				background-color:#95CAE4;
+				position:relative;
+			}
+			.multiple-nscrolls-2{
+				width:60px;
+				height:60px;
+				background-color:#FFCC33;
+				position:relative;
+			}
+			.multiple-nscrolls-3{
+				width:60px;
+				height:60px;
+				background-color:#CC3333;
+				position:relative;
+			}
+
+			#mns-1,#mns-6,#mns-11{
+				margin-left:0px;
+			}
+			#mns-2,#mns-7,#mns-12{
+				margin-left:80px;
+			}
+			#mns-3,#mns-8,#mns-13{
+				margin-left:160px;
+			}
+			#mns-4,#mns-9,#mns-14{
+				margin-left:240px;
+			}
+			#mns-5,#mns-10,#mns-15{
+				margin-left:320px;
+			}
+		</style>
+		<script type="text/javascript">
+			$(function(){
+				$('#nscroll-element-1').nscroll({ parent: '#container-1' });
+				$('#nscroll-element-2').nscroll({ parent: '#container-2' });
+				$('#nscroll-element-3').nscroll({ parent: '#nscroll-element-2', dynamicOffset: true, offsetY: 10, offsetY2: 10 });
+				$('.multiple-nscrolls-3').nscroll({ offsetY: 160, speed: 250, animate: false});
+				$('.multiple-nscrolls-2').nscroll({ offsetY: 80, speed: 250, animate: false});
+				$('.multiple-nscrolls').nscroll({ offsetY: 0, speed: 250, animate: false});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="container-1">
+			<div id="nscroll-element-1"></div>
+		</div>
+		<div id="container-2">
+			<div id="nscroll-element-2">
+				<div id="nscroll-element-3">
+					nscroll currently supports one nscroll element within an nscroll element
+				</div>
+			</div>
+		</div>
+		<div id="container-3">
+			<div id="mns-1" class="multiple-nscrolls"></div>
+			<div id="mns-2" class="multiple-nscrolls"></div>
+			<div id="mns-3" class="multiple-nscrolls"></div>
+			<div id="mns-4" class="multiple-nscrolls"></div>
+			<div id="mns-5" class="multiple-nscrolls"></div>
+			<div id="mns-6" class="multiple-nscrolls-2"></div>
+			<div id="mns-7" class="multiple-nscrolls-2"></div>
+			<div id="mns-8" class="multiple-nscrolls-2"></div>
+			<div id="mns-9" class="multiple-nscrolls-2"></div>
+			<div id="mns-10" class="multiple-nscrolls-2"></div>
+			<div id="mns-11" class="multiple-nscrolls-3"></div>
+			<div id="mns-12" class="multiple-nscrolls-3"></div>
+			<div id="mns-13" class="multiple-nscrolls-3"></div>
+			<div id="mns-14" class="multiple-nscrolls-3"></div>
+			<div id="mns-15" class="multiple-nscrolls-3"></div>
+		</div>
+	</body>
+</html>
