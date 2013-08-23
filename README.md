@@ -33,7 +33,7 @@ $('#mySidebar').nscroll({
 });
  ```
 
- examples
- -------
+examples
+-------
 
  nscroll is used for the right sidebar on my wordpress powered blog: http://neschkudla.at
