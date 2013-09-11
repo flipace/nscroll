@@ -37,3 +37,4 @@ examples
 -------
 
  nscroll is used for the right sidebar on my wordpress powered blog: http://neschkudla.at
+ you can also check out this examples page: http://www.neschkudla.at/nscroll-redirect/nscroll/examples/basic-example.html
